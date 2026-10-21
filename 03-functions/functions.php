@@ -1,5 +1,7 @@
 <?php
 
-function hello(){
+function greet(){
     echo "Welcome to PHP";
 }
+
+greet();
