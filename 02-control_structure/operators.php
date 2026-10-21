@@ -18,3 +18,32 @@
 // 4. Null Coalescing Operator
 // ?? : Returns the first operand if it exists and is not null, otherwise returns the second operand.
 // These are the most commonly used operators in if statements in PHP
+
+$age = 17;
+// $hasID = true;
+// $hasPermission = false;
+$isMember = true;
+$hasDiscountCoupon = false;
+
+// if($age >= 18 && $hasID){
+//     echo "You are allowed to enter";
+// }
+
+// if($age >= 18 || $hasPermission){
+//     echo "You are allowed to enter";
+// }else{
+//     echo "Access Denied";
+// }
+
+// if(!$isMember){
+//     echo "You need to signup";
+// }else{
+//     echo "Welcome back, member!";
+// }
+
+if ($age >= 18 && ($isMember || $hasDiscountCoupon )){
+    echo "You are elegible for the discount";
+} else{
+    echo "No discount available";
+}
+
