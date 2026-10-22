@@ -1,7 +1,8 @@
 <?php
 
-function greet(){
-    echo "Welcome to PHP";
+function greet($name) {
+    echo "Hello, {$name} welcome to PHP";
+    echo '</br>';
 }
 
-greet();
+greet("Alice");
