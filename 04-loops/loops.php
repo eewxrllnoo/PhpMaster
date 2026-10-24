@@ -20,9 +20,11 @@
 /*********************************************/
 // Do while loop
 
-$index = 1;
-do {
-    echo "Number: $index\n <br>";
-    $index++;
-} while($index <= 5);
+// $index = 1;
+// do {
+//     echo "Number: $index\n <br>";
+//     $index++;
+// } while($index <= 5);
 
+/*********************************************/
+// Foreach
