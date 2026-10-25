@@ -28,3 +28,15 @@
 
 /*********************************************/
 // Foreach
+
+// $colors = ["red", "green", "blue"];
+
+// foreach($colors as $color){
+//     echo "Color: $color <br>";
+// }
+
+$person = ["name" => "Edwin", "age" => 23];
+
+foreach($person as $key => $value){
+    echo "$key: $value <br>";
+}
