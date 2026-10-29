@@ -11,10 +11,11 @@
 <form action="process.php"  method="get">
     <input name="username" type="text" placeholder="Enter Username">
     <input name="password" type="text" placeholder="Enter Password">
+    <input name="status" type="text" placeholder="Enter Status">
     <input type="submit">
 </form>
 
-http://localhost/forms/process.php?
+ 
     
 </body>
 </html>
