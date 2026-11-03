@@ -6,6 +6,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    //Check for file uploads
     if ($_FILES["file"]["error"] === 0) {
         $uploaddir = "uploads/";
         $file_name = basename($_FILES["file"]["name"]);
@@ -32,5 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $fileErr = "Sorry there was an error uploading your file";
             }
         }
+    } else {
+        $fileErr = "No file was uploaded";
     }
 }
