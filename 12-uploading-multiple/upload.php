@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // var_dump($file_tmp);
         // echo "</pre>"; 
 
-
         if ($file_error === UPLOAD_ERR_OK) {
 
             if ($file_size > 5 * 1024 * 1024) {
@@ -34,6 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "Error: There was an time issue uploading $file_name </br>";
                 }
             }
+        } else {
+            echo "Error: There was an error uploading $file_name. Error code: $file_error </br>";
         }
     }
+} else {
+    echo "No files uploaded.";
 }
