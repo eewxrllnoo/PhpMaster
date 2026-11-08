@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         } else {
-            echo "Error: There was an error uploading $file_name. Error code: $file_error </br>";
+            echo "Error: File $file_name failed to upload due to error $file_error </br>";
         }
     }
 } else {
