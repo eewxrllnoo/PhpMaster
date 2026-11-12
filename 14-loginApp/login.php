@@ -1,3 +1,16 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+    // Example credentials
+    $username = 'admin';
+    $password = 'secret';
+
+    // Get the input from the user
+    $input_username = $_POST['username'];
+    $input_password = $_POST['password'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <h2>Login Page</h2>
 
@@ -20,5 +32,4 @@
     </form>
 
 </body>
-
 </html>
