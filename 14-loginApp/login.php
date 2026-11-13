@@ -1,4 +1,10 @@
 <?php
+// 1. Start the session at the very beginning
+session_start();
+
+// Initialize $message to avoid the undefined variable warning
+$message = "";
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     // Example credentials
@@ -11,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     if ($input_username === $username && $input_password === $password) {
         // Set session variables
-
         $_SESSION['logged_in'] = true;
         $_SESSION['username'] = $input_username;
 
-        header(header: "Locations: admin.php");
+        // 2. Fixed the typo ("Location" instead of "Locations")
+        header("Location: admin.php");
         exit;
     } else {
         $message = "Invalid username or password";
@@ -29,23 +35,22 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
 </head>
 
 <body>
     <h2>Login Page</h2>
 
-    <?php if ($message): ?>
-
-        <p style="color:red;"><?php echo $message ?></p>
-
+    <?php if (!empty($message)): ?>
+        <p style="color:red;"><?php echo $message; ?></p>
     <?php endif; ?>
 
     <form method="POST">
         <label for="username">Username</label>
         <input id="username" type="text" name="username"><br><br>
         <label for="password">Password</label>
-        <input id="password" type="text" name="password"><br><br>
+        <!-- Optional: Change type="text" to type="password" to hide password input -->
+        <input id="password" type="password" name="password"><br><br>
 
         <input type="submit" value="Login">
     </form>
