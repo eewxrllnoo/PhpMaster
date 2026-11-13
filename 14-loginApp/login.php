@@ -8,6 +8,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // Get the input from the user
     $input_username = $_POST['username'];
     $input_password = $_POST['password'];
+
+    if ($input_username === $username && $input_password === $password) {
+        // Set session variables
+
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $input_username;
+
+        header(header: "Locations: admin.php");
+        exit;
+    } else {
+        $message = "Invalid username or password";
+    }
 }
 ?>
 
@@ -19,8 +31,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h2>Login Page</h2>
+
+    <?php if ($message): ?>
+
+        <p style="color:red;"><?php echo $message ?></p>
+
+    <?php endif; ?>
 
     <form method="POST">
         <label for="username">Username</label>
@@ -32,4 +51,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     </form>
 
 </body>
+
 </html>
