@@ -8,7 +8,7 @@ $message = "";
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     // Example credentials
-    $username = 'admin';
+    $username = 'erwinllano';
     $password = 'secret';
 
     // Get the input from the user
