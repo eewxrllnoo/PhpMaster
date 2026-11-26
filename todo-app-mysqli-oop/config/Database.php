@@ -4,7 +4,7 @@
 class Database
 {
     private $host = 'localhost';
-    private $db_name = 'todo_app_mysqli_oop';
+    private $db_name = 'test_todo_app_mysql_db';
     private $username = 'root';
     private $password = '';
     public $conn;
