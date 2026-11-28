@@ -4,4 +4,6 @@ $con = mysqli_connect(hostname: "localhost", username: "root", password: "", dat
 
 if ($con) {
     echo "Connected";
+} else {
+    echo "Not connected" . mysqli_connect_error();
 }
